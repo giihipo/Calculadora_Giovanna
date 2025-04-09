@@ -1,20 +1,40 @@
-alert("digite dois números");
+function somar(num1, num2) {
+    alert("A soma é " + (num1 + num2));
+}
 
-let operador = prompt("que operação você deseja fazer?")
+function subtrair(num1, num2) {
+    alert("A subtração é " + (num1 - num2));
+}
 
-let numeroUm = prompt("digite o primeiro número");
+function multiplicar(num1, num2) {
+    alert("A multiplicação é " + (num1 * num2));
+}
 
-let numeroDois = prompt("digite o segundo número");
+function dividir(num1, num2) {
+    if (num2 === 0) {
+        alert("Erro: Divisão por zero");
+    } else {
+        alert("A divisão é " + (num1 / num2));
+    }
+}
+let num1 = Number(prompt("Escreva um número"));
+let num2 = Number(prompt("Escreva outro número"));
 
-if(operador == "+"){
-  console.log("O resultado da soma é:", numeroUm + numeroDois);
+let operacao = prompt("Escolha a operação: \n1. Somar \n2. Subtrair \n3. Multiplicar \n4. Dividir");
 
-}else if(operador == "-"){
-  console.log("O resultado da subtração é:", numeroUm - numeroDois);
-  
-}else if(operador == "/"){
-  console.log("O resultado da divisão é:", numeroUm / numeroDois);
-
-}else if (operador == "*"){
-   console.log("O resultado da multiplicação é:", numeroUm * numeroDois)         
+switch (operacao) {
+    case '1':
+        somar(num1, num2);
+        break;
+    case '2':
+        subtrair(num1, num2);
+        break;
+    case '3':
+        multiplicar(num1, num2);
+        break;
+    case '4':
+        dividir(num1, num2);
+        break;
+    default:
+        alert("Operação inválida!");
 }
