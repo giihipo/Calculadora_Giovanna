@@ -2,9 +2,9 @@ alert("digite dois números");
 
 let operador = prompt("que operação você deseja fazer?")
 
-let numeroUm = prompt("digite o primeiro número")*1;
+let numeroUm = prompt("digite o primeiro número");
 
-let numeroDois = prompt("digite o segundo número")*1;
+let numeroDois = prompt("digite o segundo número");
 
 if(operador == "+"){
   console.log("O resultado da soma é:", numeroUm + numeroDois);
